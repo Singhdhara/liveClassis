@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="calculater.css">
+  <title>Calculater</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div id="card">
+      <h1 class="title">Calculater</h1>
+      <input id="display" placeholder="Calculate Something" readonly />
+
+      <div id="calc-box">
+        <button class="calc-btn" onclick="input(7)">7</button>
+        <button class="calc-btn" onclick="input(8)">8</button>
+        <button class="calc-btn" onclick="input(9)">9</button>
+        <button class="calc-btn" onclick="input('*')">*</button>
+
+        <button class="calc-btn" onclick="input(4)">4</button>
+        <button class="calc-btn" onclick="input(5)">5</button>
+        <button class="calc-btn" onclick="input(6)">6</button>
+        <button class="calc-btn" onclick="input('-')">-</button>
+
+        <button class="calc-btn" onclick="input(1)">1</button>
+        <button class="calc-btn" onclick="input(2)">2</button>
+        <button class="calc-btn" onclick="input(3)">3</button>
+        <button class="calc-btn" onclick="input('+')">+</button>
+
+        <button class="calc-btn" onclick="input(0)">0</button>
+        <button class="calc-btn" onclick="input('.')">.</button>
+        <button class="calc-btn" onclick="cancel()">C</button>
+        <button class="calc-btn" onclick="calc()">=</button>
+
+
+      </div>
+    </div>
+  </div>
+
+  <script src="calculater.js"></script>
+</body>
+
+</html>

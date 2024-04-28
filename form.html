@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <title>Form</title>
+
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      background-color: #f5f5f5;
+      width: 75%;
+      height: 100vh;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 45px;
+    }
+
+    .card {
+      width: 350px;
+      background: white;
+      padding: 24px;
+      box-shadow: 0 0 10px 0 #ddd;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .card form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card form input {
+      padding: 12px;
+    }
+
+    .card h1 {
+      padding: 0;
+      margin: 0;
+      margin-bottom: 16px;
+      font-family: sans-serif;
+      color: dodgerblue;
+    }
+
+    .card form button {
+      border: none;
+      padding: 12px;
+      background: dodgerblue;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #modal {
+      height: 100%;
+      background: rgb(0, 0, 0, 0.8);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #modal-body {
+      width: 550px;
+      height: 250px;
+      background: #fff;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    #modal-body .fa-check-circle {
+      font-size: 30px;
+      color: green;
+    }
+
+    #modal-body h1 {
+      font-family: sans-serif;
+    }
+
+    .close-btn {
+      border: none;
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: none;
+      cursor: pointer;
+    }
+
+    .close-btn i {
+      font-size: 24px;
+
+    }
+  </style>
+</head>
+
+<body>
+
+<button style="padding: 20px 30px;" onclick="demo()">demo</button>
+
+  <div class="container">
+
+    <div class="card animate__animated animate__fadeInUp">
+      <h1>Register Now</h1>
+      <form autocomplete="off" onsubmit="sinup(event)" name="register">
+        <input value="v" name="firstname" placeholder="Firstname" type="text" required="true">
+        <input value="verma" name="lastname" placeholder="Lastname" type="text" required="true">
+        <input value="asad@gmail.com" name="email" placeholder="Email@gmail.com" type="email" required="true">
+        <input value="12345" name="password" placeholder="Password" type="password" required="true">
+        <button>Submit</button>
+      </form>
+    </div>
+    <div class="card animate__animated animate__fadeInUp">
+      <h1>Login</h1>
+      <form autocomplete="off" onsubmit="sinin(event)" name="login">
+        <input value="asad@gmail.com" name="email" placeholder="Email@gmail.com" type="email" required="true">
+        <input value="12345" name="password" placeholder="Password" type="password" required="true">
+        <button>Submit</button>
+      </form>
+    </div>
+
+
+  </div>
+
+  <div id="modal">
+    <div id="modal-body">
+      <button class="close-btn" onclick="closeModal()">
+        <i class="fa fa-times-circle"></i>
+      </button>
+      <i class="fa fa-check-circle"></i>
+      <h1>Ragister Succeful !</h1>
+    </div>
+  </div>
+
+
+
+
+  <script src="form.js"></script>
+
+</body>
+
+</html>
